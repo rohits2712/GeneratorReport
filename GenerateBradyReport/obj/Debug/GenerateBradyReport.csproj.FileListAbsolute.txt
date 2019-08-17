@@ -1,0 +1,16 @@
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\GenerateBradyReport.exe.config
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\GenerateBradyReport.exe
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\GenerateBradyReport.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\obj\Debug\GenerateBradyReport.csprojAssemblyReference.cache
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\obj\Debug\GenerateBradyReport.csproj.CoreCompileInputs.cache
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\obj\Debug\GenerateBradyReport.exe
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\obj\Debug\GenerateBradyReport.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\Models.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\Models.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\obj\Debug\GenerateBradyReport.csproj.CopyComplete
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\BLL.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\DAL.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\HelpersLibrary.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\BLL.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\DAL.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\GenerateBradyReport\bin\Debug\HelpersLibrary.pdb
