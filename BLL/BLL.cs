@@ -134,9 +134,7 @@ namespace BLL
                 }
 
             }
-
-            //Here before grouping we need to add the existing emissions
-
+            
             var dayOutput = lsMaxGenOutput.GroupBy(x => x.Date)
                                         .OrderBy(g => g.Key);
 
