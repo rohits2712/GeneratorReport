@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL
+namespace DataAccessLayer
 {
-    public interface IDAL
+    public interface IDataAccessor
     {
-        GenerationReport fetchInput(string fullPath);
-        Factors fetchFactors();
+        GenerationReport ReadInputFile(string fullPath);
+        Factors FetchFactors();
         void GenerateOutputFile(GenerationOutput finalGenerationOutput);
         GenerationOutput ReadOutputFile();
 

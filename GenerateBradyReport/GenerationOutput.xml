@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <GenerationOutput xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <totals>
+  <Totals>
     <Generator>
       <Name>Wind[Offshore]</Name>
-      <Total>24939.26</Total>
+      <Total>4987.85254</Total>
     </Generator>
     <Generator>
       <Name>Wind[Onshore]</Name>
-      <Total>73041.8047</Total>
+      <Total>14608.3623</Total>
     </Generator>
     <Generator>
       <Name>Gas[1]</Name>
-      <Total>127683.781</Total>
+      <Total>25536.7617</Total>
     </Generator>
     <Generator>
       <Name>Coal[1]</Name>
-      <Total>80125.7344</Total>
+      <Total>16025.1475</Total>
     </Generator>
-  </totals>
-  <maxEmissionGenerators>
+  </Totals>
+  <MaxEmissionGenerators>
     <Day>
       <Name>Coal[1]</Name>
       <Date>2017-01-01T05:30:00+05:30</Date>
@@ -27,18 +27,18 @@
     <Day>
       <Name>Coal[1]</Name>
       <Date>2017-01-02T05:30:00+05:30</Date>
-      <Emission>1591.279</Emission>
+      <Emission>637.5382</Emission>
     </Day>
     <Day>
       <Name>Gas[1]</Name>
       <Date>2017-01-03T05:30:00+05:30</Date>
-      <Emission>46.99911</Emission>
+      <Emission>16.2048244</Emission>
     </Day>
-  </maxEmissionGenerators>
-  <actualHeatRates>
+  </MaxEmissionGenerators>
+  <ActualHeatRates>
     <ActualHeatRate>
       <Name>Coal[1]</Name>
       <HeatRate>1</HeatRate>
     </ActualHeatRate>
-  </actualHeatRates>
+  </ActualHeatRates>
 </GenerationOutput>

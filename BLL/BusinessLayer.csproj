@@ -7,8 +7,8 @@
     <ProjectGuid>{DD1D28F1-D77C-453B-9276-F5C467E4CA14}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BLL</RootNamespace>
-    <AssemblyName>BLL</AssemblyName>
+    <RootNamespace>BusinessLayer</RootNamespace>
+    <AssemblyName>BusinessLayer</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,14 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL.cs" />
-    <Compile Include="IBLL.cs" />
+    <Compile Include="ReportProcessor.cs" />
+    <Compile Include="IReportProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\DAL.csproj">
+    <ProjectReference Include="..\DAL\DataAccesLayer.csproj">
       <Project>{8ba43327-529d-429e-b374-71d14daf0351}</Project>
-      <Name>DAL</Name>
+      <Name>DataAccesLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj">
       <Project>{1278acbf-5600-4e76-baa0-070f9f5f666d}</Project>

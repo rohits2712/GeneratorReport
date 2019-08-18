@@ -1,0 +1,13 @@
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\bin\Debug\BusinessLayer.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\bin\Debug\BusinessLayer.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\bin\Debug\DataAccessLayer.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\bin\Debug\GeneratorReport.Models.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\bin\Debug\HelpersLibrary.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\bin\Debug\DataAccessLayer.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\bin\Debug\HelpersLibrary.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\bin\Debug\GeneratorReport.Models.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\obj\Debug\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\obj\Debug\BusinessLayer.csproj.CopyComplete
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\obj\Debug\BusinessLayer.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\BLL\obj\Debug\BusinessLayer.pdb

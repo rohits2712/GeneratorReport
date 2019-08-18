@@ -1,6 +1,5 @@
-C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\bin\Debug\Models.dll
-C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\bin\Debug\Models.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\bin\Debug\GeneratorReport.Models.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\bin\Debug\GeneratorReport.Models.pdb
 C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
-C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\Models.dll
-C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\Models.pdb
-C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\GeneratorReport.Models.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\GeneratorReport.Models.pdb

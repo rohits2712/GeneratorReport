@@ -11,7 +11,8 @@ namespace HelpersLibrary
         public static T Deserialize<T>(this XElement value)
         {
             var xmlDeserializer = new XmlSerializer(typeof(T));
-            return (T)xmlDeserializer.Deserialize(value.CreateReader());
+            if (value != null) return (T) xmlDeserializer.Deserialize(value.CreateReader());
+            return default(T);
         }
 
         public static XElement Serialize<T>(this object obj)

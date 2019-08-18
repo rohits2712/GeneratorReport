@@ -1,0 +1,11 @@
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\bin\Debug\DataAccessLayer.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\bin\Debug\DataAccessLayer.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\bin\Debug\GeneratorReport.Models.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\bin\Debug\HelpersLibrary.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\bin\Debug\HelpersLibrary.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\bin\Debug\GeneratorReport.Models.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\obj\Debug\DataAccesLayer.csprojAssemblyReference.cache
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\obj\Debug\DataAccesLayer.csproj.CoreCompileInputs.cache
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\obj\Debug\DataAccesLayer.csproj.CopyComplete
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\obj\Debug\DataAccessLayer.dll
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\DAL\obj\Debug\DataAccessLayer.pdb

@@ -58,9 +58,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
+    <ProjectReference Include="..\BLL\BusinessLayer.csproj">
       <Project>{dd1d28f1-d77c-453b-9276-f5c467e4ca14}</Project>
-      <Name>BLL</Name>
+      <Name>BusinessLayer</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{a083ed0f-5b42-4d87-a16c-9ad99ad3c26f}</Project>

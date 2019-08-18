@@ -9,8 +9,13 @@ namespace Models
 {
     public class GenerationOutput
     {
+        [XmlElement("Totals")]
         public Totals totals { get; set; }
+        [XmlElement("MaxEmissionGenerators")]
+
         public MaxEmissionGenerators maxEmissionGenerators { get; set; }
+        [XmlElement("ActualHeatRates")]
+
         public ActualHeatRates actualHeatRates { get; set; }
         
     }

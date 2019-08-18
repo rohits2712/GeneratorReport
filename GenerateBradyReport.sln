@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateBradyReport", "GenerateBradyReport\GenerateBradyReport.csproj", "{04BF7B15-FD54-4795-8010-964CF2C9B67A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{8BA43327-529D-429E-B374-71D14DAF0351}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccesLayer", "DAL\DataAccesLayer.csproj", "{8BA43327-529D-429E-B374-71D14DAF0351}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{DD1D28F1-D77C-453B-9276-F5C467E4CA14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BLL\BusinessLayer.csproj", "{DD1D28F1-D77C-453B-9276-F5C467E4CA14}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{A083ED0F-5B42-4D87-A16C-9AD99AD3C26F}"
 EndProject

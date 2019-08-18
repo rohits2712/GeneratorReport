@@ -1,8 +1,8 @@
 ﻿using Models;
 using System;
-using BLL;
 using System.IO;
 using System.Configuration;
+using BusinessLayer;
 
 namespace GenerateBradyReport
 {
@@ -12,47 +12,46 @@ namespace GenerateBradyReport
         {
             try
             {
-                string observeDirectoryPath = ConfigurationManager.AppSettings["observeDirectoryPath"];
-                FileSystemWatcher watcher = new FileSystemWatcher(observeDirectoryPath);
+                var observeDirectoryPath = ConfigurationManager.AppSettings["observeDirectoryPath"];
+                var watcher = new FileSystemWatcher(observeDirectoryPath);
                 watcher.EnableRaisingEvents = true;
                 watcher.Created += Watcher_Created;
                 watcher.NotifyFilter = NotifyFilters.FileName;
                 watcher.Filter = "*.xml";
- 
+
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 Console.WriteLine($"Exception occurred - Message - {ex.Message}");
                 Console.WriteLine($"Exception occurred - Stacktrace - {ex.StackTrace}");
             }
 
             Console.ReadLine();
         }
-        
+
+        /// <summary>
+        /// This method listens to the observable folder activities indefinitely and processes the file as soon as they are placed
+        /// Generate single Output Report  
+        /// Please note if multiple files are placed one after another with same name - GenerationReport.xml.
+        /// The output file- GenerationOutput.xml gets overwritten to have the latest data as per logic
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e">event arguments for the folder activity </param>
         private static void Watcher_Created(object sender, FileSystemEventArgs e)
         {
             try
-            {                
+            {
                 Console.WriteLine($"File {e.Name} created at {DateTime.Now}");
-                
-                BLL.IBLL businessLogicLayer = new BLL.BLL();
-
-                //Get Generation Report
-                GenerationReport generationReport = businessLogicLayer.fetchInput(e.FullPath);
-
+                IReportProcessor businessLogicLayer = new ReportProcessor();
+                var generationReport = businessLogicLayer.ReadInputFile(e.FullPath);
                 if (generationReport != null)
-                {
-                    /* Generate single Output Report - 
-                    Please note if multiple files are placed one after another with same name - GenerationReport.xml.
-                    The ouput file gets overwritten*/
-                    businessLogicLayer.generateOutput(generationReport);
-                }
+                    businessLogicLayer.GenerateOutputFile(generationReport);
                 else
-                {
                     Console.WriteLine($"Invalid Report Input");
-                }
             }
-            catch {
+            catch
+            {
                 throw;
             }
         }
