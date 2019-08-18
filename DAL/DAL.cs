@@ -10,14 +10,14 @@ using System.Xml.Serialization;
 
 namespace DAL
 {
-    public class DAL
+    public class DAL:IDAL
     {
-        public GenerationReport fetchInput()
+        public GenerationReport fetchInput(string fullPath)
         {
             try
             {
-                string inputPath = ConfigurationManager.AppSettings["InputFilePath"];
-                XDocument doc = XDocument.Load(inputPath);
+                //string inputPath = ConfigurationManager.AppSettings["InputFilePath"];
+                XDocument doc = XDocument.Load(fullPath);
                 IEnumerable<XElement> GeneratedReport = doc.Elements();
                 GenerationReport inputGenerationReport = GeneratedReport.FirstOrDefault().Deserialize<GenerationReport>();
                 return inputGenerationReport;
@@ -28,7 +28,7 @@ namespace DAL
             }
 
         }
-
+      
         public Factors fetchFactors()
         {
             try

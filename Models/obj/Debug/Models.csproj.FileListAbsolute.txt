@@ -3,4 +3,3 @@ C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\bin\Debug\M
 C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\Models.dll
 C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\Models.pdb
-C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\Models\obj\Debug\Models.csprojAssemblyReference.cache

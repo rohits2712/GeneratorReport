@@ -7,20 +7,20 @@ using System;
 
 namespace BLL
 {
-    public class BLL
+    public class BLL : IBLL
     {
 
         private static List<GeneratorOutput> lsGenOutput = new List<GeneratorOutput>();
         private static List<DayOutput> lsMaxGenOutput = new List<DayOutput>();
-
         private static GenerationOutput existingGenOutput = new GenerationOutput();
-        public GenerationReport fetchInput()
+
+        public GenerationReport fetchInput(string fullPath)
         {
             try
             {
-                DAL.DAL dataAccessLayer = new DAL.DAL();
+                DAL.IDAL dataAccessLayer = new DAL.DAL();
                 //Get Generation Report
-                GenerationReport generationReport = dataAccessLayer.fetchInput();
+                GenerationReport generationReport = dataAccessLayer.fetchInput(fullPath);
                 return generationReport;
             }
             catch
@@ -34,7 +34,7 @@ namespace BLL
             try
             {
                 FetchExistingGenerationOutput();
-                DAL.DAL dataAccessLayer = new DAL.DAL();
+                DAL.IDAL dataAccessLayer = new DAL.DAL();
                 //Get Generation Report
                 GenerationOutput finalOutput = new GenerationOutput()
                 {
@@ -53,10 +53,10 @@ namespace BLL
         }
 
         #region Output file generation methods
-        private Totals TotalGenerationValues(GenerationReport reportGenerated)
+        private static Totals TotalGenerationValues(GenerationReport reportGenerated)
         {
             //Calculate Total generation value 
-            FetchExistingGenerationOutput();            
+            FetchExistingGenerationOutput();
 
             foreach (var item in reportGenerated.wind.windGenerator)
             {
@@ -77,7 +77,7 @@ namespace BLL
             {
                 GeneratorOutput coalGen = new GeneratorOutput();
                 coalGen.Name = item.name;
-                coalGen.Total = item.generation.day.Sum(x => x.energy * x.price * GetGeneratorFactorMapping(item.name).valueFactor);                
+                coalGen.Total = item.generation.day.Sum(x => x.energy * x.price * GetGeneratorFactorMapping(item.name).valueFactor);
                 SetGeneratorinGenerationOutput(coalGen);
             }
             var totals = new Totals();
@@ -102,7 +102,7 @@ namespace BLL
             }
         }
 
-        private MaxEmissionGenerators MaxEmissionGenerators(GenerationReport reportGenerated)
+        private static MaxEmissionGenerators MaxEmissionGenerators(GenerationReport reportGenerated)
         {
             //Highest Daily emission for each day along with emission value
             //Considering only Gas and coal generators as per wind generators do not have emission
@@ -156,7 +156,7 @@ namespace BLL
             //Highest Daily emission for each day along with emission value end
         }
 
-        private void SetMaxEmission(DayOutput d)
+        private static void SetMaxEmission(DayOutput d)
         {
             //adding emission to the existing record in case name is there and date is also same as of record, hence cumulative emission
             if (lsMaxGenOutput.Exists(x => x.Name.ToLower() == d.Name.ToLower() && x.Date.Date == d.Date.Date))
@@ -192,23 +192,23 @@ namespace BLL
             return new ActualHeatRates() { actualHeatRate = lsActualHeatRates };
         }
 
-        private void FetchExistingGenerationOutput()
+        private static void FetchExistingGenerationOutput()
         {
-            DAL.DAL dataAccessLayer = new DAL.DAL();
+            DAL.IDAL dataAccessLayer = new DAL.DAL();
             existingGenOutput = dataAccessLayer.ReadOutputFile();
             //assign existing value in list
             lsGenOutput = existingGenOutput.totals.GeneratorOutput;
             lsMaxGenOutput = existingGenOutput.maxEmissionGenerators.Days;
         }
-      
+
         #endregion
 
         #region Calculation Helpers
-        protected static Factors GetFactors()
+        public static Factors GetFactors()
         {
             try
             {
-                DAL.DAL dataAccessLayer = new DAL.DAL();
+                DAL.IDAL dataAccessLayer = new DAL.DAL();
                 //Get Generation Report
                 Factors factors = dataAccessLayer.fetchFactors();
                 return factors;
