@@ -3,3 +3,4 @@ C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\HelpersLibrary\bin
 C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\HelpersLibrary\obj\Debug\HelpersLibrary.csproj.CoreCompileInputs.cache
 C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\HelpersLibrary\obj\Debug\HelpersLibrary.dll
 C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\HelpersLibrary\obj\Debug\HelpersLibrary.pdb
+C:\Users\rohit\source\GenerateBradyReport\GenerateBradyReport\HelpersLibrary\obj\Debug\HelpersLibrary.csprojAssemblyReference.cache

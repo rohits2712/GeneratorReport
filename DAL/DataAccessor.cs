@@ -10,86 +10,55 @@ using System.Xml.Serialization;
 
 namespace DataAccessLayer
 {
+    /// <summary>
+    /// Generate object to be used by other layers. Layer to interact outside the project 
+    /// </summary>
     public class DataAccessor : IDataAccessor
     {
+        /// <summary>
+        /// Throws exception in case of errors
+        /// </summary>
+        /// <param name="fullPath">The xml file which has been placed in Observe folder </param>
+        /// <returns>If file is parseable to object returns object, otherwise raises exception handled in Main</returns>
         public GenerationReport ReadInputFile(string fullPath)
         {
-            try
-            {
-                var doc = XDocument.Load(fullPath);
-                IEnumerable<XElement> generatedReport = doc.Elements();
-                var inputGenerationReport = generatedReport.FirstOrDefault().Deserialize<GenerationReport>();
-                return inputGenerationReport;
-            }
-            catch
-            {
-                throw;
-            }
-
+            var doc = XDocument.Load(fullPath);
+            IEnumerable<XElement> generatedReport = doc.Elements();
+            var inputGenerationReport = generatedReport.FirstOrDefault().Deserialize<GenerationReport>();
+            return inputGenerationReport;
         }
 
         public Factors FetchFactors()
         {
-            try
-            {
-                string referenceFilePath = ConfigurationManager.AppSettings["ReferenceFilePath"];
-                XDocument referenceDocument = XDocument.Load(referenceFilePath);
-                IEnumerable<XElement> referenceData = referenceDocument.Elements();
-                var referenceDeseriaizedData = referenceData.FirstOrDefault().Deserialize<ReferenceData>();
-                return referenceDeseriaizedData.factors;
-            }
-            catch
-            {
-                throw;
-            }
+            string referenceFilePath = ConfigurationManager.AppSettings["ReferenceFilePath"];
+            XDocument referenceDocument = XDocument.Load(referenceFilePath);
+            IEnumerable<XElement> referenceData = referenceDocument.Elements();
+            var referenceDeseriaizedData = referenceData.FirstOrDefault().Deserialize<ReferenceData>();
+            return referenceDeseriaizedData.factors;
         }
 
         public void GenerateOutputFile(GenerationOutput finalGenerationOutput)
         {
-            try
-            {
-                var outputFilePath = ConfigurationManager.AppSettings["OutputFilePath"];
-                var writer = new XmlSerializer(typeof(GenerationOutput));
+            var outputFilePath = ConfigurationManager.AppSettings["OutputFilePath"];
+            var writer = new XmlSerializer(typeof(GenerationOutput));
 
-                using (var file = System.IO.File.Create(outputFilePath))
-                {
-                    writer.Serialize(file, finalGenerationOutput);
-                }
-               
-                //var doc = new XDocument();
-                //using (var writer = doc.CreateWriter())
-                //{
-                //    xmlSerializer.Serialize(writer, finalGenerationOutput);
-                //}
-                //using (var writer = new StreamWriter(outputFilePath))
-                //{
-                //    xmlSerializer.Serialize(writer, finalGenerationOutput);
-                //}
-            }
-            catch
+            using (var file = System.IO.File.Create(outputFilePath))
             {
-                throw;
+                writer.Serialize(file, finalGenerationOutput);
             }
         }
 
         public GenerationOutput ReadOutputFile()
         {
-            try
+            var outputFilePath = ConfigurationManager.AppSettings["OutputFilePath"];
+            if (outputFilePath != null && File.Exists(outputFilePath))
             {
-                var outputFilePath = ConfigurationManager.AppSettings["OutputFilePath"];
-                if (outputFilePath != null && File.Exists(outputFilePath))
-                {
-                    var existingOutputFile = XDocument.Load(outputFilePath);
-                    IEnumerable<XElement> existingOutputData = existingOutputFile.Elements();
-                    var existingGenerationOutput = existingOutputData.FirstOrDefault().Deserialize<GenerationOutput>();
-                    return existingGenerationOutput;
-                }
-                return null;
+                var existingOutputFile = XDocument.Load(outputFilePath);
+                IEnumerable<XElement> existingOutputData = existingOutputFile.Elements();
+                var existingGenerationOutput = existingOutputData.FirstOrDefault().Deserialize<GenerationOutput>();
+                return existingGenerationOutput;
             }
-            catch
-            {
-                throw;
-            }
+            return null;
         }
     }
 }

@@ -25,36 +25,22 @@ namespace BusinessLayer
 
         public GenerationReport ReadInputFile(string fullPath)
         {
-            try
-            {
-                //Get Generation Report
-                GenerationReport generationReport = _dataAccessor.ReadInputFile(fullPath);
-                return generationReport;
-            }
-            catch
-            {
-                throw;
-            }
+            //Get Generation Report
+            GenerationReport generationReport = _dataAccessor.ReadInputFile(fullPath);
+            return generationReport;
         }
 
         public void GenerateOutputFile(GenerationReport incomingGeneratedReport)
         {
-            try
+            FetchExistingGenerationOutput();
+            //Get Generation Report
+            var finalOutput = new GenerationOutput()
             {
-                FetchExistingGenerationOutput();
-                //Get Generation Report
-                var finalOutput = new GenerationOutput()
-                {
-                    totals = TotalGeneratorsOutputPerDay(incomingGeneratedReport),
-                    maxEmissionGenerators = MaxEmissionGeneratorPerDay(incomingGeneratedReport),
-                    actualHeatRates = GetActualHeatRates(incomingGeneratedReport.coal)
-                };
-                _dataAccessor.GenerateOutputFile(finalOutput);
-            }
-            catch
-            {
-                throw;
-            }
+                totals = TotalGeneratorsOutputPerDay(incomingGeneratedReport),
+                maxEmissionGenerators = MaxEmissionGeneratorPerDay(incomingGeneratedReport),
+                actualHeatRates = GetActualHeatRates(incomingGeneratedReport.coal)
+            };
+            _dataAccessor.GenerateOutputFile(finalOutput);
         }
 
         #region Output file generation methods
@@ -223,18 +209,10 @@ namespace BusinessLayer
         #region Calculation Helpers
         public static Factors GetFactors()
         {
-            try
-            {
-                IDataAccessor dataAccessLayer = new DataAccessor();
-                //Get Generation Report
-                var factors = dataAccessLayer.FetchFactors();
-                return factors;
-            }
-            catch
-            {
-                throw;
-            }
-
+            IDataAccessor dataAccessLayer = new DataAccessor();
+            //Get Generation Report
+            var factors = dataAccessLayer.FetchFactors();
+            return factors;
         }
         private static GeneratorFactorMapping GetGeneratorFactorMapping(string name)
         {

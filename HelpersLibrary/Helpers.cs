@@ -15,21 +15,6 @@ namespace HelpersLibrary
             return default(T);
         }
 
-        public static XElement Serialize<T>(this object obj)
-        {
-            using (var memoryStream = new MemoryStream())
-            {
-                using (TextWriter streamWriter = new StreamWriter(memoryStream))
-                {
-                    var xmlSerializer = new XmlSerializer(typeof(T));
-                    xmlSerializer.Serialize(streamWriter, obj);
-                    return XElement.Parse(Encoding.ASCII.GetString(memoryStream.ToArray()));
-
-                }
-
-            }
-        }
-
     }
 
 }
